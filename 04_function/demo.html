@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function show(count){
+            if(count <= 0){
+                alert("count >0 please");
+                return;
+            }
+            if(count >21){
+                alert("count <= 21")
+            }
+            let star="";
+            for(let i=1;i <=count;i++){
+                star+="*";
+            }
+            alert(star);
+        }
+        show(22);
+        // function show(count){
+
+        //     let start=0;
+        //     for(let i =1;i <= count ; i++){
+        //         start=start+1;
+        //     }
+        //     alert(start);
+        // }
+        // show(21)
+        // function show(count,what="*"){
+        //     let start = "";
+        //     for(let i=1;i <=count;i++){
+        //         start+=what;
+        //     }
+        //     alert(start);
+        // }
+        // show(8 );
+    </script>
+</body>
+</html>

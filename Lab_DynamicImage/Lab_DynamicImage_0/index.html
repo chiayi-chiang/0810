@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Image Lab</title>
+</head>
+<body>
+
+<p>...</p>
+<!--<a> 與 <img> 做了一個圖片式的超連結，目前固定連往運動家隊。-->
+<a id="imgshref" href="http://oakland.athletics.mlb.com/" target="_blank">
+  <img src="images/oak.gif" id="imgs" border="0" />
+</a>
+
+<p>...</p>
+<script>
+  let iImage = 0;
+  function setImage(){
+    let img = new Array();//圖片設一組陣列
+    let url = new Array();//鏈結設一組陣列
+    img[0] = "images/chc.gif";	url[0] = "http://chicago.cubs.mlb.com/";
+    img[1] = "images/oak.gif";	url[1] = "http://oakland.athletics.mlb.com/";
+    img[2] = "images/sd.gif";	  url[2] = "http://sandiego.padres.mlb.com/";
+    img[3] = "images/was.gif";	url[3] = "http://washington.nationals.mlb.com/";
+
+    //let iImage =Math.floor (Math.random()*img.length);//亂數產生器，floor去小數取整數
+    iImage++;
+    document.getElementById("imgs").src = img[iImage%4];
+    document.getElementById("imgshref").href = url[iImage%4];
+
+    setTimeout(setImage,100);/******/
+  }
+  setImage();
+</script>
+</body>
+</html>

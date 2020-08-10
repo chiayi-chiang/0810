@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Image Lab</title>
+</head>
+<body>
+
+<p>...</p>
+
+<a id="imgshref" href="http://oakland.athletics.mlb.com/" target="_blank">
+  <img src="images/oak.gif" id="imgs" border="0" />
+</a>
+
+<p>...</p>
+
+<script type="text/javascript">
+var iImage = 0;
+setImage();/*****/
+function setImage(){
+	var img = new Array();
+	var url = new Array();
+	img[0] = "images/chc.gif";	url[0] = "http://chicago.cubs.mlb.com/";
+	img[1] = "images/oak.gif";	url[1] = "http://oakland.athletics.mlb.com/";
+	img[2] = "images/sd.gif";	url[2] = "http://sandiego.padres.mlb.com/";
+	img[3] = "images/was.gif";	url[3] = "http://washington.nationals.mlb.com/";
+	
+	
+	// 
+	//var iImage = Math.floor(Math.random()*img.length);//亂數產生器，floor去小數取整數，
+	// if(iImage>=3){
+	// 	iImage = -1;
+	// }
+	iImage += 1;
+	// if(iImage >= 4){
+	// 	iImage = 0;
+	// }
+	//
+	//13-8
+	document.getElementById("imgs").src = img[iImage%4];//see line 12
+	document.getElementById("imgshref").href = url[iImage%4];//see line 11
+	
+	setTimeout(setImage,100);
+}
+	
+	
+</script>
+
+</body>
+</html>

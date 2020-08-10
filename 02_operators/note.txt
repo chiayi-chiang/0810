@@ -1,0 +1,9 @@
+
+while
+(row = readLine())//內括號先做，都給row,再用while迴圈
+{
+    if(row format is wrong){//row是錯的
+        continue;//finnish while while do again
+    }
+    //process one line
+}
