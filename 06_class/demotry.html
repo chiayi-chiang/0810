@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="debug"></div>
+
+    <script>
+    class CAnimal {
+    constructor(weightValue = 1) {
+        this._weight = 0;
+        this.weight = weightValue;
+    }
+    get weight() {
+        return this._weight;
+    }
+    set weight(weightValue) {
+        if (weightValue > 0) {
+            this._weight = weightValue;
+        }
+    }
+    makeSound() {
+        alert("Animal: ...");
+    }
+}
+    class CDog extends CAnimal {
+        constructor(location,weightValue) {
+            super(weightValue);
+            this.location = locationName;
+        }
+        makeSound() {
+            //super.makeSound();//繼承父階
+            alert("Dog:Wong,Wong");
+        }
+    }
+    //let obj = new CDog(null, 3);
+    let obj = new CDog("Taichung", 3);
+    alert(obj.weight);
+    alert(obj.location);
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

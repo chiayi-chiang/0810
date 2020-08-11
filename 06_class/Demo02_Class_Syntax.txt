@@ -46,6 +46,7 @@ alert(obj.weight.toString());
 
 "use strict";
 class CAnimal {
+    //設立初始值
     constructor(weightValue = 1) {
         this._weight = 0;
         this.weight = weightValue;
@@ -74,30 +75,38 @@ alert(obj.weight.toString());
 
 "use strict";
 class CAnimal {
+    //constructor在執行new時就會被跟著執行
     constructor(weightValue = 1) {
-        this._weight = 0;
-        this.weight = weightValue;
+        this._weight = 0;//A 效率 //have get have set name be same
+        this.weight = weightValue;//B 紀律
     }
     get weight() {
         return this._weight;
     }
+
+    alert(obj.weight);
+    
+    //前置檢查，方法處理
     set weight(weightValue) {
+        alert(weightValue);
         if (weightValue > 0) {
             this._weight = weightValue;
         }
     }
+    
     makeSound() {
         alert("Animal: ...");
     }
 }
+／／繼承多型
 class CDog extends CAnimal {
     makeSound() {
-        // super.makeSound();
+        // super.makeSound();//上一層，
         alert("Dog barking!");
     }
 }
 let obj = new CDog(3);
-obj.makeSound();
+obj.makeSound();//先處理富街在做本身
 
 
 
@@ -123,13 +132,14 @@ class CAnimal {
         alert("Animal: ...");
     }
 }
+//繼承多型
 class CDog extends CAnimal {
     constructor(location = "Earth", weightValue) {
-        super(weightValue);
+        super(weightValue);//....A
         this.location = location;
     }
     makeSound() {
-        // super.makeSound();
+        // super.makeSound();//...B
         alert("Dog barking!");
     }
 }

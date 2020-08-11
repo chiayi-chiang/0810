@@ -1,3 +1,4 @@
+//export匯出
 export function playWith(obj) {
     obj.makeSound();
 }
@@ -10,7 +11,7 @@ export class Animal {
         alert("Animal: ...");
     }
 }
-
+//export default,dog at "main.js" can put at {} outside
 export default class Dog extends Animal {
     constructor(location = "Earth", weightValue) {
         super(weightValue);

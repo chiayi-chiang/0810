@@ -7,16 +7,20 @@
     <div id="debug"></div>
     <script>
         // this 指向「以 new 建立的新物件」
-    
-        function Box() {
-            this.color = "black";
+        function Box(){
+            this.color = "black";//預設
         }
+        let box1 = new Box();
+        let box2 
+        // function Box() {
+        //     this.color = "black";//預設
+        // }
         
-        var box1 = new Box();
-        var box2 = new Box();
-        box2.color = "red";
+        // var box1 = new Box();
+        // var box2 = new Box();
+        // box2.color = "red";//可更改
 
-        debug.innerText = box1.color + ", " + box2.color;
+        // debug.innerText = box1.color + ", " + box2.color;
 
     </script>
 </body>

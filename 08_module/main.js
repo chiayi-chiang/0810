@@ -1,3 +1,4 @@
+//import匯入{......}from"......"
 import Dog, { playWith as play, Animal } from "./library.js";
 
 let obj = new Dog(undefined, 3);

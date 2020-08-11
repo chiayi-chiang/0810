@@ -26,8 +26,8 @@
     <div id="debug"></div>
 
     <script>
-
-        // capture phrase:
+        //this為正在處理的事件的所有物件（由外而內）
+        //capture phrase:
         document.addEventListener("click", function (e) {
             debug.innerHTML += "document click (capture): "
                 + "event.target.id: " + e.target.id + ", "

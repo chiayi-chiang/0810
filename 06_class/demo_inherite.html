@@ -6,6 +6,11 @@
 <body>
     <div id="debug"></div>
     <script>
+        class objMusicBox{
+            Box(){
+                this.color="golden"
+            }
+        }
 
         function Box() {
             this.color = "golden";
@@ -16,13 +21,14 @@
                 return "Music";
             }
         }
+
         
-        MusicBox.prototype = new Box();
+        MusicBox.prototype = new Box();//golden
+        let objMusicBox = new MusicBox();//Music
         
-        var objMusicBox = new MusicBox();
 
         debug.innerText = objMusicBox.color + ", " +
-            objMusicBox.play();
+            objMusicBox.play();//golden,Music
 
     </script>
 </body>
