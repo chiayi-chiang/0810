@@ -43,16 +43,21 @@
         ];
     
     function sendMail(mailAddress) {
+        let errorCount = 0;//一切正常
         try {
             $("#report").append(mailAddress.toString() + "<br>");
         }
         catch (e) {
+            errorCount ++;
             $("#report").append(e.message + "<br>");
         }
+        return errorCount;
     }
     
     for (i = 0; i < mailList.length; i++) {
-        sendMail(mailList[i]);
+        if(sendMail(mailList[i])>0){
+            sendMail(mailList[i])
+        }
     }
     
     

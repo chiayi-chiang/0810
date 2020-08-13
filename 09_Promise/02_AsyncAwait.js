@@ -6,14 +6,17 @@ function longTimeWork(workFine = true, errorMessage = "test") {
     })
 }
 
-// async function usingLongTimeWork() {
-//     var result = await longTimeWork(true, "test");
-//     console.log(result);
-// }
+async function usingLongTimeWork() {
+    var result = await longTimeWork(true, "test");
+    console.log(result);
+}
 
+//async&await need togather
 async function usingLongTimeWork() {
     try {
-        var result = await longTimeWork(false, "test");
+        var p = await longTimeWork(true, "test");//await P
+        console.log("processtion........")
+        var result = await p;
         console.log(result);
     }
     catch (e) {

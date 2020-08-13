@@ -57,15 +57,17 @@ report.innerHTML =
     <script>
     
     function doWork(anInt, anArray, anObject) {
+        //
         anInt = 11;
-        anArray.push("three");
+        anArray.pop();//加. 時，值才會被傳回
+        anArray=["there"];
         anObject.data = 101;
     }
 
     btnTest.onclick = function () {
         var iAmInt = 10;
         var iAmArray = ["zero", "one", "two"];
-        var iAmObject = { data: 100 };
+        var iAmObject = { data: 102 };
         
         doWork(iAmInt, iAmArray, iAmObject);
         

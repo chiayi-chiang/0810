@@ -46,18 +46,41 @@
         undefined,
         "lionel.messi@gmail.com"
         ];
-    
-    function sendMail(mailAddress) {
-        // if (mailAddress != undefined) {
-        //     $("#report").append("資料有缺<br>");
-        //     return;
-        // }
-        $("#report").append(mailAddress.toString() + "<br>");
+    function sendMail(mailAddress){
+        $("#report").append(mailAddress.toString()+"<br>");
     }
-    
+    //try&cash(e)
+    // function sendMail(mailAddress){
+    //     try{
+    //         $("#report").append(mailAddress.toString() + "<br>");
+    //     }
+    //     catch(e){
+    //         $("#report").append(e.toString() + "<br>");
+    //     }
+    // }
     for (i = 0; i < mailList.length; i++) {
-        sendMail(mailList[i]);
+        try{
+            sendMail(mailList[i]);
+        }
+        catch(e){
+            $("#report").append(e.message+"<br>");
+        }
+         
     }
+    // function sendMail(mailAddress) {
+    // 
+        
+    //     if (typeof mailAddress === "undefined") 
+    //     {
+    //         $("#report").append("資料有缺<br>");
+    //         return;
+    //     }
+    //     $("#report").append(mailAddress.toString() + "<br>");
+    // }
+    
+    // for (i = 0; i < mailList.length; i++) {
+    //     sendMail(mailList[i]);
+    // }
     
     
     

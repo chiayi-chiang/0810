@@ -48,7 +48,8 @@
         ];
     
     function sendMail(mailAddress) {
-        if (typeof mailAddress === "undefined") {
+        if (typeof mailAddress === "undefined") //use typeof 去查是否有 mailAddress
+        {
             $("#report").append("資料有缺<br>");
             return;
         }
